@@ -2,7 +2,6 @@ package hotel;
 
 import java.time.LocalDate;
 import java.time.Month;
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

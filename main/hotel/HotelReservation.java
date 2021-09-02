@@ -14,7 +14,7 @@ public class HotelReservation {
 
     /**
      * Created a array list name as hotels. Created a method addHotel to add the
-     * hotels in the array list.
+     * hotels in the Array list.
      */
     public void addHotel(Hotel hotel) {
         hotels.add(hotel);

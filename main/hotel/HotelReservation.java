@@ -13,11 +13,9 @@ public class HotelReservation
     ArrayList<Hotel> hotelList = new ArrayList<>();
 
     public static void main(String[] args) {
-<<<<<<< HEAD
+
         System.out.println("Welcome to HotelReservation");
-=======
-        System.out.println("Welcome to Hottel");
->>>>>>> Uc1_AddHotel
+
     }
 
 

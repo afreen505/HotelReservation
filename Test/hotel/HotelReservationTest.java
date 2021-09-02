@@ -10,13 +10,17 @@ import org.junit.Test;
 public class HotelReservationTest {
     /**
      * Created a parameterized constructor of hotelReservation.
+     * UC-3 : added the weekend rates for the hotels
      */
-
     HotelReservation hotelReservation = new HotelReservation();
-    Hotel lakewood = new Hotel("LakeWood", 110);
-    Hotel bridgewood = new Hotel("BridgeWood", 150);
-    Hotel ridgewood = new Hotel("RidgeWood", 220);
+    Hotel lakewood = new Hotel("LakeWood", 110, 90);
+    Hotel bridgewood = new Hotel("BridgeWood", 150, 50);
+    Hotel ridgewood = new Hotel("RidgeWood", 220, 150);
 
+    /**
+     * setup is a function through which i can add the value in the array list.
+     * by calling the addHotel function , adding the value in array list.
+     */
     @Before
     public void setUp() {
         HotelReservation hotelReservation = new HotelReservation();
@@ -25,6 +29,9 @@ public class HotelReservationTest {
         hotelReservation.addHotel(ridgewood);
     }
 
+    /**
+     * This test method is use to check , if the hotel is added the return true .
+     */
 
     @Test
     public void givenHotel_ToAddInHotelReservation_ShouldReturnTrue() {
@@ -35,8 +42,7 @@ public class HotelReservationTest {
     }
 
     /**
-     * This method is used to check the cheapest hotel between the given data range
-     * .
+     * This method is used to check the cheapest hotel between the given data range .
      */
     @Test
     public void givenDateRange_ShouldReturnCheapestHotel() {

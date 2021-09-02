@@ -1,22 +1,32 @@
 package hotel;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class HotelReservation {
-    ArrayList<Hotel> hotelList = new ArrayList<>(); //Created Arraylist as hotelList
+    /**
+     * Created a array list name as hotels.
+     */
+    public static List<Hotel> hotels = new ArrayList<>();
 
-    public static void main(String[] args) {
-        System.out.println("Welcome to Hotel");
+    /**
+     * Created a array list name as hotels. Created a method addHotel to add the
+     * hotels in the array list.
+     */
+    public void addHotel(Hotel hotel) {
+        hotels.add(hotel);
     }
 
-    public void addHotelDetails() {                //Created method addHotelDetails
-        hotelList.add(new Hotel("Lakewood", 110));
-        hotelList.add(new Hotel("Bridgewood", 150));
-        hotelList.add(new Hotel("Ridgewood", 250));
-
+    public Hotel getCheapestHotel(LocalDate startDate, LocalDate lastDate) {
+        long daysBetween = ChronoUnit.DAYS.between(startDate, lastDate);
+        int cheapRate;
+        Hotel cheapest = Collections.min(hotels, Comparator.comparing(hotel -> hotel.regularWeekDayRate));
+        cheapRate = (int) ((daysBetween + 1) * cheapest.regularWeekDayRate);
+        System.out.println("Cheapest Hotel Name: " + cheapest.name + "\nTotal Rate: " + cheapRate);
+        return cheapest;
     }
-
-
 }
-
-

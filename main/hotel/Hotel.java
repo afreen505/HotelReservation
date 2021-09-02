@@ -1,25 +1,17 @@
 package hotel;
 
 public class Hotel {
-    // Parameters Instance Variable
-    private String hotelName;
-    private int regularRate;
+    public String name;
+    public int regularWeekDayRate;
 
-    public String getHotelName() {
-        return hotelName;
+    public Hotel(String name, int regularWeekDayRate) {
+        this.name = name;
+        this.regularWeekDayRate = regularWeekDayRate;
+
     }
 
-    public void setHotelName(String hotelName) {
-        this.hotelName = hotelName;
+    @Override
+    public String toString() {
+        return "Hotel Name: " + name + " " + "\nRegularWeekDayRate: " + regularWeekDayRate;
     }
-
-    public int getRegularRate() {
-        return regularRate;
-    }
-
-    public void setRegularRate(int regularRate) {
-        this.regularRate = regularRate;
-    }
-
-
 }

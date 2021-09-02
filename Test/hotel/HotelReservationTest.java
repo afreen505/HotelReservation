@@ -1,4 +1,5 @@
 package hotel;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -11,11 +12,9 @@ public class HotelReservationTest {
     }
 
     @Test
-    public void shouldPrintWelcomeMessage()
-    {
+    public void shouldPrintWelcomeMessage() {
         //Creating Objects
-        HotelReservation hotelReservation=new HotelReservation();
-        hotelReservation.printWelcomeMessage();
+        HotelReservation hotelReservation = new HotelReservation();
         hotelReservation.addHotelDetails();
     }
 }

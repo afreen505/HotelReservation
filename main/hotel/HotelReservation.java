@@ -6,7 +6,7 @@ public class HotelReservation {
     ArrayList<Hotel> hotelList = new ArrayList<>();
 
     public static void main(String[] args) {
-        System.out.println("Welcome to Hotel");
+        System.out.println("Welcome to Hottel");
     }
 
     public void addHotelDetails() {

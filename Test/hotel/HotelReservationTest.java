@@ -13,7 +13,7 @@ public class HotelReservationTest {
 
     @Test
     public void shouldPrintWelcomeMessage() {
-        //Creating Objects
+        //Creating Object
         HotelReservation hotelReservation = new HotelReservation();
         hotelReservation.addHotelDetails();
     }
